@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'heyurl/bootstrap.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'heyurl/style.css' %}">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-sm-4">
+      <a class="navbar-brand" href="#">HeyURL!</a>
+    </nav>
+    <table class="table">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th scope="col">Short URL</th>
+                      <th scope="col">Clicks this Month</th>
+                      <th scope="col">Safari (Total)</th>
+                      <th scope="col">Chrome (Total)</th>
+                      <th scope="col">Mozilla (Total)</th>
+                        <th scope="col">Mobile (Total)</th>
+                      <th scope="col">PC (Total)</th>
+                        <th scope="col"><a href="/">Back to Index</a></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                        <td><a href="/{{ url.short_url }}">{{ url }}</a></td>
+                        <td>{{ clicks }}</td>
+                        <td>{{ safari }}</td>
+                        <td>{{ Chrome }}</td>
+                        <td>{{ Mozilla }}</td>
+                          <td>{{ mobile }}</td>
+                        <td>{{ pc }}</td>
+                      </tr>
+                  </tbody>
+                </table>
+</body>
+</html>
